@@ -2,6 +2,7 @@
 
 clear
 
+
 spinner() {
   local i sp n
   sp='/-\|'
@@ -12,13 +13,17 @@ spinner() {
   done
 }
 
+
 spinner &
 
+
 msg="wellcome everyone"
+
 
 for ((i=0; i<${#msg}; i++)); do
     echo -ne "\e[$((31 + i % 6))m${msg:$i:1}"
 done
+
 
 for ((i=1; i<=10; i++)); do
     echo ""
@@ -30,31 +35,35 @@ sleep 5
 
 kill "$!" 2>/dev/null
 
-echo "echo 'Greetings and congratulations to all, thanks to all for running the package with my bash script '"
+echo "echo 'made by me package you are welcome'"
 
-# Update the package list
-echo "Updating package list..."
+
+
+echo -e "\e[31mUpdating package list...\e[0m"
 pkg update -y
 
-# Upgrade the installed packages
-echo "Upgrading installed packages..."
+
+
+echo -e "\033[32mUpgrading installed packages...\033[0m"
 pkg upgrade -y
 
-# Install Python and pip
-echo "Installing Python and pip..."
+
+
+echo -e "\033[34mInstalling Python and pip...\033[0m"
 pkg install -y python
 
-# Upgrade pip
-echo "Upgrading pip..."
+
+echo -e "\033[31mUpgrading pip...\033[0m"
 pip install --upgrade pip
-echo "Installing requests"
+echo -e "\033[33mInstalling requests\033[0m"
 pip install requests
-echo "Installing colorama"
+echo -e "\033[32mInstalling colorama\033[0m"
 pip install colorama
-echo "Installing urlscanio"
+echo -e "\033[31mInstalling urlscanio\033[0m"
 pip install urlscanio
-# Install BeautifulSoup
-echo "Installing BeautifulSoup..."
+
+echo -e "\033[31mInstalling BeautifulSoup...\033[0m"
 pip install beautifulsoup4
 
-echo "All tasks completed successfully."
+echo "All tasks completed successfully.
+"
