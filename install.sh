@@ -30,7 +30,7 @@ sleep 5
 
 kill "$!" 2>/dev/null
 
-echo "echo 'made by me package you are welcome'"
+echo "echo 'Greetings and congratulations to all, thanks to all for running the package with my bash script '"
 
 # Update the package list
 echo "Updating package list..."
